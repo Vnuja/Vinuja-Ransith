@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N. P. Vinuja Ransith - Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .bg-custom {
+            background: linear-gradient(135deg, #4c51bf, #7f9cf5);
+        }
+
+        .primary-btn:hover {
+            background-color: #4c51bf;
+            color: #ffffff;
+        }
+
+        .contact-link:hover {
+            color: #4c51bf;
+            text-decoration: underline;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hide sections initially */
+        .section {
+            display: none;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            /* This makes the main content take all available space */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <!-- Name on the left side -->
+            <a href="javascript:void(0);" class="text-2xl font-semibold text-gray-800 hover:text-gray-600"
+                onclick="showSection('home')">Vinuja Ransith</a>
+            <!-- Navigation links on the right side -->
+            <div class="hidden md:flex space-x-6">
+                <a href="javascript:void(0);" class="text-gray-800 hover:text-gray-600"
+                    onclick="showSection('home')">Home</a>
+                <a href="javascript:void(0);" class="text-gray-800 hover:text-gray-600"
+                    onclick="showSection('skills')">Skills</a>
+                <a href="javascript:void(0);" class="text-gray-800 hover:text-gray-600"
+                    onclick="showSection('projects')">Projects</a>
+                <a href="javascript:void(0);" class="text-gray-800 hover:text-gray-600"
+                    onclick="showSection('contact')">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="py-12 bg-custom text-white fade-in section"
+            class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-10 px-80">
+            <div class="mt-20 max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl font-extrabold tracking-wide leading-tight">N. P. Vinuja Ransith</h1>
+                <p class="mt-6 text-2xl font-semibold italic">Aspiring IT Professional & Future Innovator</p>
+                <p class="mt-4 text-xl">Undergraduate | Sri Lanka Institute of Information Technology (SLIIT)</p>
+                <p class="mt-40 text-xl"></p>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gradient-to-r from-teal-500 to-blue-600 text-white fade-in section">
+            <div class="mt-20 container mx-auto px-6 md:px-12">
+                <h2 class="text-4xl font-extrabold text-center text-white mb-8">Skills</h2>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <span
+                        class="bg-blue-200 text-blue-900 py-3 px-6 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 hover:shadow-xl">
+                        Programming Basics
+                    </span>
+                    <span
+                        class="bg-blue-200 text-blue-900 py-3 px-6 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 hover:shadow-xl">
+                        IoT & Automation
+                    </span>
+                    <span
+                        class="bg-blue-200 text-blue-900 py-3 px-6 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 hover:shadow-xl">
+                        Project Leadership
+                    </span>
+                    <span
+                        class="bg-blue-200 text-blue-900 py-3 px-6 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 hover:shadow-xl">
+                        Team Collaboration
+                    </span>
+                    <span
+                        class="bg-blue-200 text-blue-900 py-3 px-6 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 hover:shadow-xl">
+                        AI & Hardware
+                    </span>
+                </div>
+            </div>
+            <p class="mt-40 text-xl"></p>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12 fade-in section">
+            <div class="container mx-auto px-6 md:px-12">
+                <h2 class="text-3xl font-semibold text-center mb-6">Projects</h2>
+                <div class="flex flex-col md:flex-row gap-8 justify-center">
+                    <!-- Smart Home Project Card -->
+                    <div class="project-card bg-white shadow-lg rounded-lg p-6 text-center">
+                        <h3 class="text-xl font-semibold">Smart Home System</h3>
+                        <p class="mt-4 text-gray-700">
+                            A fully online-controlled smart home setup, integrating IoT for seamless automation and
+                            convenience in modern living.
+                        </p>
+                    </div>
+                    <!-- Smart Vehicle Project Card -->
+                    <div class="project-card bg-white shadow-lg rounded-lg p-6 text-center">
+                        <h3 class="text-xl font-semibold">Smart Vehicle System</h3>
+                        <p class="mt-4 text-gray-700">
+                            Designed a web-controlled vehicle for enhanced safety and comfort, demonstrating my interest
+                            in connected car technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-50 fade-in section">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Contact Us</h2>
+                
+                <!-- Contact Details -->
+                <div class="text-center mb-8">
+                    <p class="text-gray-700">Feel free to reach out to us via the following methods:</p>
+                    <ul class="mt-4 text-gray-600">
+                        <li><strong>Email:</strong> <a href="mailto:vinujaransith039@gmail.com" class="text-blue-600 hover:text-blue-500">vinujaransith039@gmail.com</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+94769451554" class="text-blue-600 hover:text-blue-500">+94 76 945 1554</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Social Media Links -->
+                <div class="text-center">
+                    <p class="text-gray-700 mb-4">Follow us on social media:</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://facebook.com" target="_blank" class="text-gray-800 hover:text-blue-600">
+                            <i class="bi bi-facebook text-3xl"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-800 hover:text-blue-400">
+                            <i class="bi bi-twitter text-3xl"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-800 hover:text-pink-600">
+                            <i class="bi bi-instagram text-3xl"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-800 hover:text-blue-500">
+                            <i class="bi bi-linkedin text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4 text-center fade-in">
+        <p>&copy; 2024 N. P. Vinuja Ransith. All rights reserved.</p>
+        <div class="flex justify-center gap-4 mt-4">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                class="contact-link text-white hover:text-blue-400">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/yourprofile" target="_blank"
+                class="contact-link text-white hover:text-gray-400">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle navigation -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+
+        // Default to show home section
+        showSection('home');
+    </script>
+
+</body>
+
+</html>
