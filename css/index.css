@@ -222,10 +222,12 @@ body{
     opacity: 1;
     transform:rotate(-45deg);
 }
-.header-image img{
+.header-image img {
     height: 100vh;
     float: right;
+    margin-left: 33554000px;
 }
+
 .header-image{
     float: right;
     height: auto;
